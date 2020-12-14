@@ -1,20 +1,22 @@
-bubble_sort_by(array) do |left, right|
+def bubble_sort_by(array) 
   index = 0
   number_of_times_sort = 0
 
   while number_of_times_sort < array.length
     while index < array.length - 1
-      if left.length - right.length
-        substitute_value = left
-        left = right
-        right = substitute_value
+      if (yield array[index], array[index+1]).to_i >= 0
+        substitute_value = array[index]
+        array[index] = array[index+1]
+        array[index+1] = substitute_value
       end
       index += 1
     end
     number_of_times_sort += 1
     index = 0
   end
-  print array
+  return array
 end
 
-bubble_sort_b(%w[hi hello hey])
+bubble_sort_by(["hi", "hello", "hey"]) do |left, right|
+  left.length - right.length
+end

@@ -13,6 +13,5 @@ def bubble_sort(array)
     number_of_times_sort += 1
     index = 0
   end
-  print array
+  return array
 end
-bubble_sort([4, 3, 78, 2, 0, 2])
