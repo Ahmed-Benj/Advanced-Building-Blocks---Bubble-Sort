@@ -1,7 +1,6 @@
 def bubble_sort(array)
   index = 0
   number_of_times_sort = 0
-
   while number_of_times_sort < array.length
     while index < array.length - 1
       if array[index] > array[index + 1]
@@ -16,5 +15,4 @@ def bubble_sort(array)
   end
   print array
 end
-
 bubble_sort([4, 3, 78, 2, 0, 2])
