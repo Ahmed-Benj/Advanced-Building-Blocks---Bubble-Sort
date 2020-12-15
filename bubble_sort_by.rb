@@ -14,5 +14,5 @@ def bubble_sort_by(array)
     number_of_times_sort += 1
     index = 0
   end
-  return array
+  print array
 end
